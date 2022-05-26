@@ -83,7 +83,7 @@ contract IonicNFT is ERC721Enumerable, Ownable {
             "You are not whitelisted"
         );
         require(tokenIds < maxTokenIds, "Exceeded maximum Ionic NFT supply");
-        require(msg.value >= _price, "Ether amount sent is not correct");
+        require(msg.value >= _presalePrice, "Ether amount sent is not correct");
         tokenIds += 1;
 
         // _safeMint(ERC721 function) is a safer version of the _mint function as it ensures that
@@ -101,7 +101,7 @@ contract IonicNFT is ERC721Enumerable, Ownable {
             "Presale has not ended yet"
         );
         require(tokenIds < maxTokenIds, "Exceed maximum Ionic NFT supply");
-        require(msg.value >= _price, "Ether amount sent is not correct");
+        require(msg.value >= _publicPrice, "Ether amount sent is not correct");
         tokenIds += 1;
 
         _safeMint(msg.sender, tokenIds);
