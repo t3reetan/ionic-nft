@@ -92,12 +92,13 @@ export default function Home() {
    * @param {*} needSigner - True if you need the signer, default false otherwise
    */
   const getProviderOrSigner = async (needSigner = false) => {
-    // Connect to Metamask
+    // Connect to Metamask, this is the line that makes metamask extension pop up
     // Since we store `web3Modal` as a reference, we need to access the `current` value to get access to the underlying object
     const provider = await web3ModalRef.current.connect();
     const web3Provider = new providers.Web3Provider(provider);
 
     // If user is not connected to the Rinkeby network, let them know and throw an error
+    // because our deployed contract is on Rinkeby. if they are not on Rinkeby, they can't interact with our contract.
     const { chainId } = await web3Provider.getNetwork();
     if (chainId !== 4) {
       window.alert("Change the network to Rinkeby");

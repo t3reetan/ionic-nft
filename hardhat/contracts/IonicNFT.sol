@@ -47,7 +47,7 @@ contract IonicNFT is ERC721Enumerable, Ownable {
     /**
      * @dev ERC721 constructor takes in a `name` and a `symbol` to the token collection.
      * name in our case is `Ionic Elements` and symbol is `IE`.
-     * Constructor for Ionic Elements takes in the baseURI to set _baseTokenURI for the collection.
+     * Constructor for Ionic Elements takes in the baseURI (root URL of website domain api in our case) to set _baseTokenURI for the collection.
      * It also initializes an instance of whitelist interface.
      */
     // A constructor is an optional function that is executed when a contract is first deployed

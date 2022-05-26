@@ -599,4 +599,4 @@ export const abi = [
 
 // Paste the NFT contract address that you saved when you previously deployed the contract
 export const NFT_CONTRACT_ADDRESS =
-  "0xF879c355ACd619D48878Ab534174E118b184e5b1";
+  "0x9494E43FE033C3492984d15f41226964F076c86b";

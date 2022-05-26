@@ -16,7 +16,8 @@ async function main() {
    */
   const ionicNFTContract = await ethers.getContractFactory("IonicNFT");
 
-  // deploy the contract
+  // deploy the contract by calling constructor in NFT contract
+  // # of arguments must correspond to # of parameters in the NFT contract constructor
   const deployedIonicNFTContract = await ionicNFTContract.deploy(
     metadataURL,
     whitelistContract
